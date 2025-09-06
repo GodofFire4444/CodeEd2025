@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cognivo - Modified Aurora UI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="aurora-background">
+        <div class="aurora-shape shape1"></div>
+        <div class="aurora-shape shape2"></div>
+        <div class="aurora-shape shape3"></div>
+    </div>
+    
+    <svg id="robo1" class="cognivo-robo" viewBox="0 0 100 100">
+        <g class="robo-body">
+            <path d="M30 80 C 30 40, 70 40, 70 80 Z" class="body-shape"/>
+            <text x="50" y="60" text-anchor="middle" class="robo-name">C</text>
+            <circle cx="43" cy="50" r="3" class="eye"/>
+            <circle cx="57" cy="50" r="3" class="eye"/>
+        </g>
+    </svg>
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar glass-panel">
+            <div class="logo-placeholder">
+                <!-- MODIFICATION: Added placeholder for your rectangular logo -->
+                <img src=".\logo haCKATHON (5).png" alt="Cognivo Logo">
+            </div>
+            <h2 class="sidebar-heading">Generate</h2>
+            <div class="task-buttons">
+                <button class="task-btn" data-task="quiz">Quick Quiz</button>
+                <button class="task-btn" data-task="flashcard">Flash Card</button>
+                <button class="task-btn" data-task="summary">Summary</button>
+                <button class="task-btn" data-task="translate">Translate</button>
+            </div>
+            <div class="language-selector">
+                <label for="lang-select">Select Language</label>
+                <select id="lang-select">
+                    <option value="">--Please choose an option--</option>
+                    <option value="en" selected>English</option>
+                    <option value="hi">Hindi (हिन्दी)</option>
+                    <option value="bn">Bengali (বাংলা)</option>
+                    <option value="mr">Marathi (मराठी)</option>
+                    <option value="te">Telugu (తెలుగు)</option>
+                    <option value="ta">Tamil (தமிழ்)</option>
+                    <option value="gu">Gujarati (ગુજરાતી)</option>
+                    <option value="kn">Kannada (ಕನ್ನಡ)</option>
+                    <option value="ml">Malayalam (മലയാളം)</option>
+                    <option value="pa">Punjabi (ਪੰਜਾਬੀ)</option>
+                    <option value="ur">Urdu (اردو)</option>
+                </select>
+            </div>
+        </aside>
+
+        <!-- Main Chat Interface -->
+        <main class="chat-interface">
+            <div class="chat-messages">
+                 <div class="message welcome-message glass-panel">Welcome to the future with Cognivo.</div>
+            </div>
+            <div id="error-message" class="error-message-box glass-panel" style="display: none;"></div>
+            <div class="chat-input-area">
+                <form id="chat-form" class="glass-panel">
+                    <div class="input-wrapper">
+                         <textarea id="chat-input" placeholder="Start your journey..."></textarea>
+                         <div class="input-icons">
+                            <button type="button" id="camera-btn" class="icon-btn" title="Attach photo or video">
+                                <i class="fa-solid fa-camera"></i>
+                            </button>
+                            <button type="button" id="file-btn" class="icon-btn" title="Attach a file">
+                                <i class="fa-solid fa-paperclip"></i>
+                            </button>
+                            <button type="button" id="link-btn" class="icon-btn" title="Attach a link">
+                                <i class="fa-solid fa-link"></i>
+                            </button>
+                         </div>
+                    </div>
+                    <button type="submit" class="send-btn"><i class="fa-solid fa-wand-magic-sparkles"></i></button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add this to your HTML -->
+    <input type="file" id="file-input" style="display:none;" />
+
+</body>
+</html>
